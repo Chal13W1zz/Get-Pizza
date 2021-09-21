@@ -93,6 +93,73 @@
             );
 
             $("#cart").show();  
+            var count = 1 ;
+
+            $("#add-pizza").click(function(){
+                count++;
+                var grandTotal = totalPrice * count;
+                $("#cart").append("<tbody>"+"<tr><td>" + order.type + "</td><td>" + order.size + "</td><td>" +
+                order.crust + "</td><td>" + order.topping + "</td><td>" + totalPrice + "/=" + "</td></tr>" + "</tbody>");
+                $("#msg").empty().append("The total amount for your order is "+ grandTotal+" your package is ready for pick up at our office, you can opt for doorstep delivery with an extra cost"); 
+
+                $("#checkout").click(function(){
+                    $("#add-pizza").hide();
+                    $("#doorstep").hide();
+                    $("#checkout").hide();
+                    $("#msg").empty().append("The total amount for your order is "+ grandTotal + " your package is ready for pick up at our office");     
+                });
+
+
+                $("#doorstep").click(function(){
+                    $("#delivery").show();
+                    $("#add-pizza").hide();
+                    $("#doorstep").hide();
+                    $("#checkout").hide(); 
+                  
+
+                    $("#deliver").click(function(e){
+                        e.preventDefault();
+                        var name = $("#name").val();
+                        var location = $("#location").val();
+                        var phone = $("#phone").val();
+                        var transport = Math.round((Math.random() * 1000));
+                        $("#msg").empty().append("The total amount for your order is "+ (grandTotal + transport) + "/=, Ksh " + transport + " transfort fee inclusive.");
+                        $("#msg").append(" Delivery will be made in the next "+ Math.round(Math.random()*100) +" minutes")
+                        alert("Thank you for purchasing from us " + name + " your order will be delivered to "+location)
+                        $("#delivery").hide();
+                    })
+                });
+
+            });
+
+            $("#checkout").click(function(){
+                $("#add-pizza").hide();
+                $("#doorstep").hide();
+                $("#checkout").hide();
+                $("#msg").empty().append("The total amount for your order is "+ totalPrice + " your package is ready for pick up at our office"); 
+            })
+
+            $("#doorstep").click(function(){
+                $("#delivery").show();
+                $("#add-pizza").hide();
+                $("#doorstep").hide();
+                $("#checkout").hide(); 
+              
+
+                $("#deliver").click(function(e){
+                    e.preventDefault();
+                    var name = $("#name").val();
+                    var location = $("#location").val();
+                    var phone = $("#phone").val();
+                    var transport = Math.round((Math.random() * 1000));
+                    $("#msg").empty().append("The total amount for your order is "+ (totalPrice + transport) + "/=, Ksh " + transport + " transfort fee inclusive.");
+                    $("#msg").append(" Delivery will be made in the next "+ Math.round(Math.random()*100) +" minutes")
+                    alert("Thank you for purchasing from us " + name + " your order will be delivered to "+location)
+                    $("#delivery").hide();
+                })
+            });
+
+
     
         });
     
