@@ -45,13 +45,43 @@
             }
 
             var crusts = {
-                gluten_free : 100,
+                glutenfree : 100,
                 cracker : 150,
                 crispy : 200,
                 stuffed :250
             }
 
             var order = new PlaceOrder(pizzaType, pizzaSize, pizzaCrust, topping);
+
+            PlaceOrder.prototype.getSizePrice = function(){
+                var size = this.size.toLowerCase().replace(/\s+/g, '');
+                return sizes[size];              
+            }
+
+            PlaceOrder.prototype.getCrustPrice = function(){
+                var crust = this.crust.toLowerCase().replace(/\s+/g, '');
+                return crusts[crust];
+            }
+
+            PlaceOrder.prototype.getToppingsPrice = function(){
+                var size = this.size.toLowerCase().replace(/\s+/g, '');
+                if(size === "small"){
+                    return 100
+                }else if(size === "medium"){
+                    return 150
+                }else if(size === "large"){
+                    return 200
+                }else if(size == "ultralarge"){
+                    return 250
+                } else {
+                    console.log("we don't do that here");
+                }
+
+            }
+
+            var totalPrice = order.getSizePrice() + order.getCrustPrice() + order.getToppingsPrice() ;
+
+            console.log(totalPrice)
     
         });
     
