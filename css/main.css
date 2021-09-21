@@ -1,30 +1,32 @@
 body {
-    background-image: url(../images/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
 }
 
 img#rnd {
-    border-radius: 50px;
-    width: 100px;
-    
+  border-radius: 50px;
+  width: 100px;
+
 }
 
 .logo {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .btn-scroll {
-    transition: 0.4s;
-    color: rgba(255, 255, 255, 0.6);
-    animation: up-down 1s ease-in-out infinite alternate-reverse both;
-  }
+  transition: 0.4s;
+  color: rgba(255, 255, 255, 0.6);
+  animation: up-down 1s ease-in-out infinite alternate-reverse both;
+}
 
-  .btn-scroll i {
-    font-size: 70px;
-  }
+.btn-scroll i {
+  font-size: 70px;
+}
 
-  .btn-scroll:hover {
-    color: #FF0000;
-  }
+.btn-scroll:hover {
+  color: #FF0000;
+  border-radius: 100px;
+  background-color: white;
+}

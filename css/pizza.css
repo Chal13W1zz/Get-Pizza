@@ -5,6 +5,12 @@
 #cart {
     display: none;
 }
+.cartH {
+    text-align: left;
+}
+.homeH {
+    text-align: right;
+}
 #cartholder {
     display: none;
 }

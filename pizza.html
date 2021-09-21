@@ -17,8 +17,8 @@
 
   <nav class="navbar sticky navbar-light bg-dark top" style="height: 60px;">
     <div class="container-fluid">
-      <img class="position-absolute top-100 start-50 translate-middle" id="logo" src="images/logo.png" alt="site logo"
-        width="100px">
+      <a href="index.html"><img class="position-absolute top-100 start-50 translate-middle" id="logo" src="images/logo.png" alt="site logo"
+        width="100px"></a>
     </div>
   </nav>
 
@@ -65,9 +65,9 @@
   </table>
 
   <div id="get-pizza-section" class="getaPizza text-center">
-      <h1>Get A Pizza</h1>
+    <h1>Get A Pizza</h1>
 
-      <form  class="row g-3 needs-validation row justify-content-md-center" novalidate>
+    <form class="row g-3 needs-validation row justify-content-md-center" novalidate>
 
       <div class="col-md-3">
         <label for="validationCustom04" class="form-label">Type Of Pizza</label>
@@ -120,34 +120,37 @@
       <div class="rdio">
 
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sausage" value="Sausage" required>
-            <label class="form-check-label" for="inlineRadio1">Sausage</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="bacon" value="Bacon" required>
-            <label class="form-check-label" for="inlineRadio2">Bacon</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mushrooms" value="Mushrooms" required>
-            <label class="form-check-label" for="inlineRadio3">Mushrooms</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pineaple" value="Pineaple" required>
-            <label class="form-check-label" for="inlineRadio4">Pineaple</label>
-          </div>
-    
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sausage" value="Sausage" required>
+          <label class="form-check-label" for="inlineRadio1">Sausage</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="bacon" value="Bacon" required>
+          <label class="form-check-label" for="inlineRadio2">Bacon</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mushrooms" value="Mushrooms"
+            required>
+          <label class="form-check-label" for="inlineRadio3">Mushrooms</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pineaple" value="Pineaple"
+            required>
+          <label class="form-check-label" for="inlineRadio4">Pineaple</label>
+        </div>
+
       </div>
 
       <div class="col-12">
         <button class="btn btn-primary" type="submit" id="get-pizza">Get Pizza</button>
       </div>
 
-      </form>
+    </form>
 
   </div>
 
   <div class="cart container-sm" id="cartholder">
-    <h1>Cart</h1>
+    <a class="cartH" href="pizza.html"><h1 style="display:inline">Cart |</h1></a> 
+    <a class="homeH" href="index.html"><h1 style="display:inline"> | Home</h1></a>
 
     <table id="cart" class="table mt-5 container-sm">
       <thead>
@@ -161,38 +164,41 @@
       </thead>
     </table>
 
-      <button class="btn btn-primary" type="submit" id="add-pizza">Add Pizza</button>
-      <button class="btn btn-primary" type="submit" id="checkout">Checkout</button>
-      <button class="btn btn-primary" type="submit" id="doorstep">Doorstep delivery</button>
+   <div class="butts d-flex justify-content-evenly">
+    <button class="btn btn-primary" type="submit" id="add-pizza">Add Pizza</button>
+    <button class="btn btn-primary" type="submit" id="checkout">Checkout</button>
+    <button class="btn btn-primary" type="submit" id="doorstep">Doorstep delivery</button>
+   </div>
 
-      <p id="msg"></p>
+    <p id="msg"></p>
 
-      <form id="delivery">
-        <div class="input-group">
-          <span class="input-group-text">Name</span>
-          <input type="text" id="name" aria-label="Name" class="form-control">
-        </div>
+    <form id="delivery">
+      <div class="input-group">
+        <span class="input-group-text">Name</span>
+        <input type="text" id="name" aria-label="Name" class="form-control">
+      </div>
 
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Location Address</label>
-          <input type="text" class="form-control" id="location" aria-describedby="locationHelp">
-          <div id="locationHelp" class="form-text">We'll never share your location with anyone else.</div>
-        </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Location Address</label>
+        <input type="text" class="form-control" id="location" aria-describedby="locationHelp">
+        <div id="locationHelp" class="form-text">We'll never share your location with anyone else.</div>
+      </div>
 
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Phone Number</label>
-          <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp">
-          <div id="phoneHelp" class="form-text">We'll give you a call once the order has arrived.</div>
-        </div>
-      
-        <button class="btn btn-primary" type="submit" id="deliver">Deliver</button>
-      </form>
-   
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp">
+        <div id="phoneHelp" class="form-text">We'll give you a call once the order has arrived.</div>
+      </div>
+
+      <button class="btn btn-primary" type="submit" id="deliver">Deliver</button>
+    </form>
+
 
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
   <script src="js/pizza.js"></script>
 </body>
-</html>
 
+</html>
