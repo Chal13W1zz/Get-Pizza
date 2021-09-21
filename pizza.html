@@ -22,13 +22,14 @@
     </div>
   </nav>
 
-  <table class="table mt-5 ">
+  <table class="table mt-5 container-sm">
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Sizes</th>
         <th scope="col">Crust</th>
         <th scope="col">Toppings</th>
+        <th scope="col">Toppings Pricing</th>
       </tr>
     </thead>
     <tbody>
@@ -37,24 +38,28 @@
         <td>Small : 500/=</td>
         <td>Gluten Free : 100/=</td>
         <td>Sausage</td>
+        <td>Small Pizza : 100/=</td>
       </tr>
       <tr>
         <th scope="row">2</th>
         <td>Medium : 700/=</td>
         <td>Cracker : 150/=</td>
         <td>Bacon</td>
+        <td>Medium Pizza : 150/=</td>
       </tr>
       <tr>
         <th scope="row">3</th>
         <td>Large : 900/=</td>
         <td>Crispy : 200/=</td>
         <td>Mushrooms</td>
+        <td>Large Pizza : 200/=</td>
       </tr>
       <tr>
         <th scope="row">4</th>
         <td>Ultra Large : 1100/=</td>
         <td>Suffed : 250/=</td>
         <td>Pineaple</td>
+        <td>Ultra Large Pizza : 250/=</td>
       </tr>
     </tbody>
   </table>
@@ -62,15 +67,88 @@
   <div class="getaPizza text-center">
       <h1>Get A Pizza</h1>
 
-      <label for="exampleDataList" class="form-label">Datalist example</label>
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-<datalist id="">
-  <option value="Cheese Pizza ">
-  <option value="New York">
-  <option value="Seattle">
-  <option value="Los Angeles">
-  <option value="Chicago">
-</datalist>
+      <form class="row g-3 needs-validation row justify-content-md-center" novalidate>
+
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">Type Of Pizza</label>
+        <select class="form-select" id="pType" required>
+          <option selected disabled value="">Choose...</option>
+          <option value="cheese">Cheese Pizza</option>
+          <option value="bbq">BBQ Chicken Pizza</option>
+          <option value="hawaiian">Hawaiian Pizza</option>
+          <option value="peperoni">Peperoni Pizza</option>
+          <option value="deluxe">Deluxe Pizza</option>
+          <option value="veggie">Veggie Pizza</option>
+          <option value="meat">Meat Pizza</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a type of pizza.
+        </div>
+      </div>
+
+
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">Pizza Size</label>
+        <select class="form-select" id="pSize" required>
+          <option selected disabled value="">Choose...</option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+          <option value="ultralarge">Ultra Large</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a pizza size.
+        </div>
+      </div>
+
+
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">Pizza Crust</label>
+        <select class="form-select" id="pCrust" required>
+          <option selected disabled value="">Choose...</option>
+          <option value="gluten-free">Gluten Free</option>
+          <option value="cracker">Cracker</option>
+          <option value="crispy">Crispy</option>
+          <option value="stuffed">Stuffed</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select your favourite pizza crust.
+        </div>
+      </div>
+
+      <label for="rdio" class="form-label">Topping</label>
+      <div class="rdio">
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Sausage">
+            <label class="form-check-label" for="inlineRadio1">Sausage</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Bacon">
+            <label class="form-check-label" for="inlineRadio2">Bacon</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Mushrooms">
+            <label class="form-check-label" for="inlineRadio3">Mushrooms</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Pineaple">
+            <label class="form-check-label" for="inlineRadio4">Pineaple</label>
+          </div>
+    
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit" id="generate">Get Pizza</button>
+      </div>
+
+
+
+
+
+
+      </form>
+
 
   </div>
 
