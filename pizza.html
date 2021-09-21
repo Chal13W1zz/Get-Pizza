@@ -22,7 +22,7 @@
     </div>
   </nav>
 
-  <table class="table mt-5 container-sm">
+  <table id="prizing" class="table mt-5 container-sm">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -64,10 +64,10 @@
     </tbody>
   </table>
 
-  <div class="getaPizza text-center">
+  <div id="get-pizza-section" class="getaPizza text-center">
       <h1>Get A Pizza</h1>
 
-      <form class="row g-3 needs-validation row justify-content-md-center" novalidate>
+      <form  class="row g-3 needs-validation row justify-content-md-center" novalidate>
 
       <div class="col-md-3">
         <label for="validationCustom04" class="form-label">Type Of Pizza</label>
@@ -142,13 +142,27 @@
         <button class="btn btn-primary" type="submit" id="get-pizza">Get Pizza</button>
       </div>
 
-
-
-
-
-
       </form>
 
+  </div>
+
+  <div class="cart container-sm" id="cartholder">
+    <h1>Cart</h1>
+
+    <table id="cart" class="table mt-5 container-sm">
+      <thead>
+        <tr>
+          <th scope="col">Pizza Type</th>
+          <th scope="col">Pizza Size</th>
+          <th scope="col">Pizza Crust</th>
+          <th scope="col">Pizza Topping</th>
+          <th scope="col">Total Price</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
 
   </div>
 

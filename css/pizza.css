@@ -1,3 +1,10 @@
 #logo {
     border-radius: 100px;
 }
+
+#cart {
+    display: none;
+}
+#cartholder {
+    display: none;
+}

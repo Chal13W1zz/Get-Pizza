@@ -23,6 +23,12 @@
 
         $("#get-pizza").click(function(e){
             e.preventDefault();
+
+            $("#prizing").hide();
+            $("#get-pizza-section").hide();
+            $("#cartholder").show();
+        
+
             var pizzaType = $("#pType option:selected").text();
             var pizzaSize = $("#pSize option:selected").text();
             var pizzaCrust = $("#pCrust option:selected").text();
@@ -82,6 +88,11 @@
             var totalPrice = order.getSizePrice() + order.getCrustPrice() + order.getToppingsPrice() ;
 
             console.log(totalPrice)
+            $("#cart").append("<tbody>"+"<tr><td>" + order.type + "</td><td>" + order.size + "</td><td>" +
+                order.crust + "</td><td>" + order.topping + "</td><td>" + totalPrice + "/=" + "</td></tr>" + "</tbody>"
+            );
+
+            $("#cart").show();  
     
         });
     
