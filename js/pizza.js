@@ -27,6 +27,31 @@
             var pizzaSize = $("#pSize option:selected").text();
             var pizzaCrust = $("#pCrust option:selected").text();
             var topping = $('form input[type=radio]:checked').val();
+
+            class PlaceOrder{
+                constructor(type, size, crust, topping){
+                    this.type = type;
+                    this.size = size;
+                    this.crust = crust;
+                    this.topping = topping;
+                }
+            }
+
+            var sizes = {
+                small : 500,
+                medium : 700,
+                large : 900,
+                ultralarge : 1100
+            }
+
+            var crusts = {
+                gluten_free : 100,
+                cracker : 150,
+                crispy : 200,
+                stuffed :250
+            }
+
+            var order = new PlaceOrder(pizzaType, pizzaSize, pizzaCrust, topping);
     
         });
     
